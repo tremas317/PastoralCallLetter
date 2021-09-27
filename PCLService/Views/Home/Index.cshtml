@@ -1,0 +1,50 @@
+﻿@model PCLService.Models.Home
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new {
+    enctype = "multipart/form-data"
+}))
+
+{
+
+<div class="jumbotron">
+    <h2>Pastoral Compensation Tool</h2>
+    <p class="lead">
+        A Service of The Committee on Ministerial Care
+        of the Orthodox Presbyterian Church
+    </p>
+    <p><a href="~/pastoral-compensation-tool/" class="btn btn-primary btn-lg">Launch tool &raquo;</a></p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Pastoral Call Letter</h2>
+    </div>
+    <div class="panel-body">
+        <p>The Pastoral Call Letter is a Microsoft Word document template that is used to generate the call letter from the tool.</p>
+        <p>To update the Pastoral Call Letter, enter the password below, click "Choose File" to select the template file, then click "Upload".</p>
+        @if (Model.ShowError)
+        {
+            <div class="alert alert-danger alert-dismissible">
+                Password is incorrect.  You will need to wait at least @Model.TimeoutValue seconds before trying again.
+            </div>
+        }
+        @if (Model.ShowSuccess)
+        {
+            <div class="alert alert-success alert-dismissible">
+                Pastoral Call Letter updated successfully.
+            </div>
+        }
+        <p>
+            Password: @Html.PasswordFor(m => m.Password)
+        </p>
+        <p>
+            <input type="file" name="CallLetter" required />
+        </p>
+        <p>
+            <input id="btnSubmit" type="submit" value="Upload" class="btn btn-default" />
+        </p>
+    </div>
+</div>
+
+
+}
