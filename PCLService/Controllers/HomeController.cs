@@ -45,5 +45,11 @@ namespace PCLService.Controllers
             return View(new Home() { ShowSuccess = true });
         }
 
+        [HttpGet]
+        public FileResult Download()
+        {
+            return File(System.IO.File.ReadAllBytes(HttpContext.Request.MapPath(@"~\PastorCallLetter.docx")), "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "PastorCallLetter.docx");
+        }
+
     }
 }
