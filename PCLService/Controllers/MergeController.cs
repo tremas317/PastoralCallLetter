@@ -76,7 +76,7 @@ namespace PCLService.Controllers
                 using (var srv = new RichEditDocumentServer())
                 {
 #if DEBUG
-                    srv.LoadDocument(@"C:\Users\jfall\Documents\PastorCallLetter.docx");
+                    srv.LoadDocument(@"C:\Users\jfall\Documents\OPC Project\PastorCallLetter.docx");
 #else
                     srv.LoadDocument(HttpContext.Current.Server.MapPath(@"~\PastorCallLetter.docx"));
 #endif
