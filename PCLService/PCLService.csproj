@@ -156,13 +156,13 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="pastoral-compensation-tool\css\app.2d37a153.css">
+    <Content Include="pastoral-compensation-tool\css\app.dc6cfeaf.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="pastoral-compensation-tool\css\chunk-vendors.da4d3d03.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.0558bba2.js">
+    <Content Include="pastoral-compensation-tool\js\app.1a078adb.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="pastoral-compensation-tool\js\chunk-vendors.1077b27a.js">
@@ -176,7 +176,7 @@
     <Content Include="pastoral-compensation-tool\js\chunk-vendors.1077b27a.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.0558bba2.js.map">
+    <Content Include="pastoral-compensation-tool\js\app.1a078adb.js.map">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\PCLService - FTP.pubxml" />
