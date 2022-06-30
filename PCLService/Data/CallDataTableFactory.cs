@@ -28,9 +28,29 @@ namespace PCLService.Data
             var colWorldlyCareClause = new DataColumn("WorldlyCareClause", typeof(string));
             var colOtherExpenses = new DataColumn("OtherExpenses", typeof(string));
             var colInsuranceMessage = new DataColumn("InsuranceMessage", typeof(string));
+            var colLeaveMode = new DataColumn("LeaveMode", typeof(string));
 
             dt.Columns.AddRange(new DataColumn[] { colPastorName, colChurchName, colCity, colState, colSalary, colHousingAllowance, colMedical, colPension, colLife, 
-                colDisability, colSECA, colVacation, colStudyLeave, colSabbatical, colOtherExpenses, colWorldlyCareClause, colInsuranceMessage });
+                colDisability, colSECA, colVacation, colStudyLeave, colSabbatical, colOtherExpenses, colWorldlyCareClause, colInsuranceMessage, colLeaveMode });
+
+            string leaveMode;
+
+            if (data.StudyLeave <= 0 && data.Sabbatical <= 0)
+            {
+                leaveMode = "1";  // Vacation only
+            }
+            else if (data.StudyLeave > 0 && data.Sabbatical <= 0)
+            {
+                leaveMode = "2";  // Vacation and study leave
+            }
+            else if (data.StudyLeave <= 0 && data.Sabbatical > 0)
+            {
+                leaveMode = "3";  // Vacation and sabbatical
+            }
+            else
+            {
+                leaveMode = "4"; // Vacation, study leave, and sabbatical
+            }
 
             var row = dt.NewRow();
 
@@ -51,6 +71,7 @@ namespace PCLService.Data
             row[colOtherExpenses] = data.OtherExpenses;
             row[colWorldlyCareClause] = data.WorldlyCareClause;
             row[colInsuranceMessage] = data.InsuranceMessage;
+            row[colLeaveMode] = leaveMode;
 
             dt.Rows.Add(row);
 
