@@ -156,13 +156,13 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="pastoral-compensation-tool\css\app.cd12fc10.css">
+    <Content Include="pastoral-compensation-tool\css\app.466f5bf8.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="pastoral-compensation-tool\css\chunk-vendors.da4d3d03.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.31e588e9.js">
+    <Content Include="pastoral-compensation-tool\js\app.78b7cbe4.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="pastoral-compensation-tool\js\chunk-vendors.cc0cfd74.js">
@@ -173,10 +173,10 @@
     <Content Include="PastorCallLetter.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.31e588e9.js.map">
+    <Content Include="pastoral-compensation-tool\js\chunk-vendors.cc0cfd74.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\chunk-vendors.cc0cfd74.js.map">
+    <Content Include="pastoral-compensation-tool\js\app.78b7cbe4.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\PCLService - FTP.pubxml" />
