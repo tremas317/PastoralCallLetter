@@ -162,7 +162,7 @@
     <Content Include="pastoral-compensation-tool\css\chunk-vendors.da4d3d03.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.c1e99367.js">
+    <Content Include="pastoral-compensation-tool\js\app.2c12e2f1.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="pastoral-compensation-tool\js\chunk-vendors.cc0cfd74.js">
@@ -176,7 +176,7 @@
     <Content Include="pastoral-compensation-tool\js\chunk-vendors.cc0cfd74.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.c1e99367.js.map">
+    <Content Include="pastoral-compensation-tool\js\app.2c12e2f1.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\PCLService - FTP.pubxml" />
