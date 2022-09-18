@@ -1,7 +1,4 @@
-﻿using DevExpress.XtraPrinting;
-using DevExpress.XtraRichEdit;
-
-using PCLService.Data;
+﻿using PCLService.Data;
 using PCLService.Helpers;
 using PCLService.Models;
 
@@ -68,53 +65,30 @@ namespace PCLService.Controllers
                 {
                     data.WorldlyCareClause = "No";
                 }
-                
+
                 data.OtherExpenses = data.OtherExpenses ?? string.Empty;
-                data.InsuranceMessage = data.InsuranceMessage ?? string.Empty;                
+                data.InsuranceMessage = data.InsuranceMessage ?? string.Empty;
                 data.OutputFormat = data.OutputFormat?.ToUpper() ?? string.Empty;
 
-                using (var srv = new RichEditDocumentServer())
-                {
+                string letterFilename;
 #if DEBUG
-                    srv.LoadDocument(@"C:\Users\jfall\Documents\OPC Project\PastorCallLetter.docx");
+                letterFilename = @"C:\Users\jfall\Documents\OPC Project\PastorCallLetter.docx";
 #else
-                    srv.LoadDocument(HttpContext.Current.Server.MapPath(@"~\PastorCallLetter.docx"));
+                letterFilename = HttpContext.Current.Server.MapPath(@"~\PastorCallLetter.docx");
 #endif
-                    var source = CallDataTableFactory.GetDataSource(data);
-                    srv.Options.MailMerge.DataSource = source;
+                byte[] fileBytes = DXMergeService.MergeService.Merge(letterFilename, CallDataTableFactory.GetDataSource(data), data.OutputFormat);
 
-                    using (var target = new RichEditDocumentServer())
-                    {
-                        var myOptions = srv.Document.CreateMailMergeOptions();
-                        myOptions.FirstRecordIndex = 1;
-                        myOptions.MergeMode = DevExpress.XtraRichEdit.API.Native.MergeMode.NewParagraph;
-
-                        srv.MailMerge(target.Document);
-
-                        if (data.OutputFormat.ToUpper() == "PDF")
-                        {
-                            PdfExportOptions pdfOpts = new PdfExportOptions();                            
-
-                            using (var file = new MemoryStream())
-                            {
-                                target.ExportToPdf(file, pdfOpts);
-                                headers.Add("Content-Disposition", "attachment; filename=\"CallLetter.pdf\"");
-                                headers.Add("Content-Type", "application/pdf");
-                                return file.ToArray();
-                            }
-                        }
-                        else
-                        {
-                            using (var file = new MemoryStream())
-                            {
-                                target.SaveDocument(file, DocumentFormat.OpenXml);
-                                headers.Add("Content-Disposition", "attachment; filename=\"CallLetter.docx\"");
-                                headers.Add("Content-Type", "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
-                                return file.ToArray();
-                            }
-                        }
-                    }
+                if (data.OutputFormat.ToUpper() == "PDF") {
+                    headers.Add("Content-Disposition", "attachment; filename=\"CallLetter.pdf\"");
+                    headers.Add("Content-Type", "application/pdf");
                 }
+                else
+                {
+                    headers.Add("Content-Disposition", "attachment; filename=\"CallLetter.docx\"");
+                    headers.Add("Content-Type", "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+                }
+
+                return fileBytes;
             }
 
             catch (Exception e)
