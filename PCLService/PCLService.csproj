@@ -154,10 +154,10 @@
     <Content Include="pastoral-compensation-tool\css\chunk-vendors.da4d3d03.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.e6c8489e.js">
+    <Content Include="pastoral-compensation-tool\js\app.0eb19e73.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\chunk-vendors.cc0cfd74.js">
+    <Content Include="pastoral-compensation-tool\js\chunk-vendors.e5f845a8.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
@@ -165,10 +165,10 @@
     <Content Include="PastorCallLetter.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\chunk-vendors.cc0cfd74.js.map">
+    <Content Include="pastoral-compensation-tool\js\chunk-vendors.e5f845a8.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.e6c8489e.js.map">
+    <Content Include="pastoral-compensation-tool\js\app.0eb19e73.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\PCLService - FTP.pubxml" />
