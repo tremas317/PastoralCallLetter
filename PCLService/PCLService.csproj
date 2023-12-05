@@ -148,28 +148,28 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="pastoral-compensation-tool\css\app.cf746955.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="pastoral-compensation-tool\css\app.a013c2cd.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="pastoral-compensation-tool\css\chunk-vendors.da4d3d03.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.0eb19e73.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="pastoral-compensation-tool\js\app.7ba22bd8.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\chunk-vendors.e5f845a8.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="pastoral-compensation-tool\js\chunk-vendors.20855467.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="PastorCallLetter.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\chunk-vendors.e5f845a8.js.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="pastoral-compensation-tool\js\app.7ba22bd8.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="pastoral-compensation-tool\js\app.0eb19e73.js.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="pastoral-compensation-tool\js\chunk-vendors.20855467.js.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\PCLService - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\PCLService - ReadOnly - FTP.pubxml" />
