@@ -17,6 +17,7 @@ namespace PCLService.Models
         public decimal Pension { get; set; }
         public decimal Life { get; set; }
         public decimal Disability { get; set; }
+        public decimal Vision { get; set; }
         public decimal SECA { get; set; }
         public decimal Vacation { get; set; }
         public decimal StudyLeave { get; set; }

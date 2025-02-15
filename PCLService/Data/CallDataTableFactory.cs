@@ -21,6 +21,7 @@ namespace PCLService.Data
             var colPension = new DataColumn("Pension", typeof(decimal));
             var colLife = new DataColumn("Life", typeof(decimal));
             var colDisability = new DataColumn("Disability", typeof(decimal));
+            var colVision = new DataColumn("Vision", typeof(decimal));
             var colSECA = new DataColumn("SECA", typeof(decimal));
             var colVacation = new DataColumn("Vacation", typeof(decimal));
             var colStudyLeave = new DataColumn("StudyLeave", typeof(decimal));
@@ -31,7 +32,7 @@ namespace PCLService.Data
             var colLeaveMode = new DataColumn("LeaveMode", typeof(string));
 
             dt.Columns.AddRange(new DataColumn[] { colPastorName, colChurchName, colCity, colState, colSalary, colHousingAllowance, colMedical, colPension, colLife, 
-                colDisability, colSECA, colVacation, colStudyLeave, colSabbatical, colOtherExpenses, colWorldlyCareClause, colInsuranceMessage, colLeaveMode });
+                colDisability, colVision, colSECA, colVacation, colStudyLeave, colSabbatical, colOtherExpenses, colWorldlyCareClause, colInsuranceMessage, colLeaveMode });
 
             string leaveMode;
 
@@ -64,6 +65,7 @@ namespace PCLService.Data
             row[colPension] = data.Pension;
             row[colLife] = data.Life;
             row[colDisability] = data.Disability;
+            row[colVision] = data.Vision;
             row[colSECA] = data.SECA;
             row[colVacation] = data.Vacation;
             row[colStudyLeave] = data.StudyLeave;
